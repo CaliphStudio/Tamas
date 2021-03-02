@@ -1,0 +1,422 @@
+@import "myScss/myScss";
+
+div.headerMargin {
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    margin-top: 79px;
+}
+
+div.settingsBoxFirst {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .15);
+    width: 90%;
+    margin: 50px 5% 50px 5%;
+    border-radius: 10px;
+    height: 360px;
+    overflow: hidden;
+}
+
+div.imageBox {
+    height: 100%;
+    float: right;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 200px;
+}
+
+img.profileImage {
+    width: 100%;
+    border-radius: 100px;
+}
+
+div.infoBox {
+    margin-right: 50px;
+    box-sizing: border-box;
+    width: 320px;
+    float: right;
+}
+
+div.infoPartBox {
+    height: 70px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 45px;
+}
+
+div.infoPartTitle {
+    width: 100%;
+    text-align: right;
+    color: black;
+    font-size: 24px;
+}
+
+div.infoPartValue {
+    width: 77%;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 132, 255, 0.1);
+    text-align: center;
+    padding: 10px 0 10px 0;
+    font-size: 18px;
+    float: right;
+}
+
+div.infoPartChangeButton {
+    width: 18%;
+    margin-right: 5%;
+    border-radius: 10px;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    font-size: 18px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.changeInfoBox {
+    height: 100%;
+    width: 320px;
+    margin-right: 50px;
+    float: right;
+    box-sizing: border-box;
+    display: none;
+    background-color: red;
+}
+
+div.passwordBox {
+    width: 100px;
+    margin-right: 50px;
+    float: right;
+}
+
+div.changePasswordButton {
+    padding: 10px 15px 10px 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgb(0, 132, 255);
+    font-size: 18px;
+    float: right;
+    color: white;
+    margin-top: 53px;
+}
+
+div.settingsBoxSecond {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .15);
+    width: 90%;
+    margin: 50px 5% 50px 5%;
+    border-radius: 10px;
+    height: 160px;
+}
+
+div.chooseOneBox {
+    width: 25%;
+    float: right;
+    font-size: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 30px;
+    position: relative;
+    color: black;
+}
+
+label.chooseOneSwitch {
+    width: 100px;
+    height: 34px;
+    position: absolute;
+    top: 60px;
+    right: 50%;
+    transform: translateX(50%);
+    display: inline-block;
+}
+
+label.chooseOneSwitch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+span.switchSlider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+span.switchSlider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + span.switchSlider {
+    background-color: rgb(0, 132, 255);
+}
+
+input:checked + span.switchSlider:before {
+    -webkit-transform: translateX(66px);
+    -ms-transform: translateX(66px);
+    transform: translateX(66px);
+}
+
+div.settingsBoxThird {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .15);
+    width: 90%;
+    margin: 50px 5% 50px 5%;
+    border-radius: 10px;
+}
+
+div.thirdTop {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px 20px 0 20px;
+}
+
+div.thirdTopRight {
+    width: 350px;
+    float: right;
+}
+
+div.thirdTopRightBuyTutorials {
+    float: right;
+    padding: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: solid 1px rgb(0, 132, 255);
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    width: 50%;
+    text-align: center;
+}
+
+div.thirdTopRightSellTutorials {
+    float: right;
+    padding: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: solid 1px rgb(0, 132, 255);
+    cursor: pointer;
+    border-radius: 10px 0 0 10px;
+    background-color: white;
+    color: rgb(0, 132, 255);
+    width: 50%;
+    text-align: center;
+}
+
+div.thirdTopLeft {
+    padding: 11px;
+    font-size: 18px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(255, 169, 56);
+    color: white;
+    width: 200px;
+    text-align: center;
+    float: left;
+}
+
+div.thirdTutorialsBox {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px 20px 20px 20px;
+    overflow: auto;
+}
+
+div.tutorialBox {
+    height: 350px;
+    width: 300px;
+    position: relative;
+    float: right;
+    background-color: white;
+    box-shadow: 0px 9px 30px #dddddd;
+    border-radius: 3px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+div.tutorialBoxLast {
+    height: 350px;
+    width: 300px;
+    position: relative;
+    float: right;
+    background-color: white;
+    box-shadow: 0px 9px 30px #FAFAFA;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+img.tutorialImage {
+    object-fit: cover;
+    width: 300px;
+    height: 160px;
+    border-radius: 3px;
+    background-color: rgba(196, 196, 196, 0.2);
+}
+
+div.tutorialDescription {
+    box-sizing: border-box;
+    padding-right: 5px;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+    text-align: right;
+}
+
+div.tutorialLinks {
+    box-sizing: border-box;
+    padding-right: 5px;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    color: black;
+    text-align: right;
+    align-content: flex-start;
+}
+
+a.tutorialLink {
+    float: right;
+    color: rgb(0, 132, 255);
+}
+
+a.tutorialLink:hover {
+    color: rgb(50, 182, 255);
+}
+
+div.tutorialLine {
+    width: 250px;
+    margin-left: 25px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.06);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.tutorialContinue, div.tutorialOpen {
+    float: left;
+    margin-left: 25px;
+    color: rgb(255, 169, 56);
+    width: 60px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+div.tutorialContinue:hover, div.tutorialOpen:hover {
+    color: rgb(225, 139, 26);
+}
+
+@media only screen and (max-width: 1100px) {
+    div.settingsBoxFirst {
+        height: 600px;
+    }
+
+    div.imageBox {
+        height: auto;
+        float:none;
+        width: 100%;
+        padding-left: calc(50% - 100px);
+        padding-top: 10px;
+    }
+
+    img.profileImage {
+        width: 200px;
+        margin: auto;
+        border-radius: 100px;
+    }
+
+    div.infoBox {
+        margin-right: 0;
+        padding-right: 25px;
+        padding-left: 25px;
+        width: 50%;
+        float: right;
+    }
+
+    div.changeInfoBox {
+        width: 50%;
+        margin-right: 0;
+        padding-right: 25px;
+        padding-left: 25px;
+        float: right;
+        height: 360px;
+        background-color: red;
+    } 
+}
+
+@media only screen and (max-width: 850px) {
+    div.settingsBoxSecond {
+        height: 250px;
+    }
+
+    div.chooseOneBox {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 772px) {
+    div.settingsBoxFirst {
+        height: 700px;
+    }
+
+    div.infoBox {
+        margin-right: 0;
+        padding-right: 25px;
+        padding-left: 25px;
+        width: 100%;
+        float: right;
+    }
+
+    div.passwordBox {
+        width: calc(100% - 50px);
+        margin-right: 25px;
+        margin-left: 25px;
+        float: right;
+    }
+    
+    div.changePasswordButton {
+        margin-top: 23px;
+        width: 100%;
+        text-align: center;
+    }
+
+    div.thirdTopRight {
+        width: calc(100% - 50px);
+        margin-right: 25px;
+        margin-left: 25px;
+        float: left;
+    }
+
+    div.thirdTopLeft {
+        width: calc(100% - 50px);
+        margin-bottom: 20px;
+        margin-right: 25px;
+        margin-left: 25px;
+        text-align: center;
+    }
+
+    div.tutorialBox {
+        margin-right: calc(50% - 150px);
+        margin-bottom: 20px;
+    }
+}

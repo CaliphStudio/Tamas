@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>حساب کاربری تماس</title>
+    <link rel="icon" href="icons/logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/generalStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/settingsStyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+    <header style="z-index: 2;">
+        <a href="main.html"><img class="headerLogo" src="icons/logo.png" alt="لوگو تماس" /></a>
+
+        <a><div class="headerLinks headerLinksFirst">درباره ما</div></a>
+        <a><div class="headerLinks">ارتباط با ما</div></a>
+        <a><div class="headerLinks" id="forum"><img style="width: 5px; margin-bottom: 4px; margin-right: 2px;" src="icons/triangle.png" />پرسش ها
+            <div class="forumDropdown">
+                <a class="forumDropdownLink">رایج ترین پرسش ها</a>
+                <a class="forumDropdownLink">پرسش های مربوط به سایت</a>
+                <a class="forumDropdownLink">پرسش های مربوط به آموزش ها</a>
+                <a class="forumDropdownLink">گزارش مشکل</a>
+            </div>
+        </div></a>
+
+        <a href="settings.html"><div class="account">
+            <img class="accountPicture" src="icons/accountIcon.png" />
+            <p class="accountUsername">CaliphStudio<img style="width: 5px; margin-bottom: 2px; margin-left: 2px;" src="icons/triangle.png" /></p>
+            <div class="accountDropdown">
+                <a class="accountDropdownLink"><img src="icons/messageIcon.png" class="accountDropdownLinkIcon" />صندوق پیام</a>
+                <a class="accountDropdownLink"><img src="icons/settingsIcon.png" class="accountDropdownLinkIcon" />تنظیمات</a>
+                <a class="accountDropdownLink"><img src="icons/nightIcon.png" class="accountDropdownLinkIcon" />حالت شبانه</a>
+                <a class="accountDropdownLink accountDropdownLinkLogout"><img src="icons/logoutIcon.png" class="accountDropdownLinkIcon" />خروج</a>
+            </div>
+        </div></a>
+
+        <img src="icons/burgerMenuIcon.png" class="burgerMenu"  onclick="burgerMenu(0)" />
+
+        <a href="#"><div class="shoppingCart">
+            <img class="shoppingCartPicture" src="icons/shoppingCartIcon.png"/>
+            <div class="shoppingCartNumber"><div class="centeredText">2</div></div>
+        </div></a>
+
+        <form class="search">
+            <div class="searchBarDiv">
+                <input class="searchBar"  type="text" dir="rtl" placeholder="آموزش مورد نظر را وارد کنید ..." />
+                <input class="searchIcon" type="image" src="icons/searchIcon.png" alt="جستجو" />
+                <img class="searchCloseIcon" src="icons/blueCloseIcon.png" alt="بستن" onclick="expandSearch(1)" />
+            </div>
+            <a class="advancedSearch" href="advancedSearch.html" title="جستجوی پیشرفته"><div class="centeredText"><b>+</b></div></a>
+        </form>
+        
+        <img class="mobileSearch" src="icons/searchIcon.png" onclick="expandSearch(0)" />
+
+        <div class="openedBurgerMenu">
+            <img class="closeBurger" src="icons/blueCloseIcon.png" onclick="burgerMenu(1)" />
+            <div class="burgerAccount">
+                <div class="burgerAccountName">CaliphStudio</div>
+                <img class="burgerAccountPicture" src="icons/accountIcon.png" />
+            </div>
+            <div class="burgerFirst">
+                <a><div class="burgerFirstLinks burgerShoppingCart">
+                    <div class="burgerFirstLinksText">سبد خرید</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueShoppingCartIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">صندوق پیام</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueMessageIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">تنظیمات</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueSettingsIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">حالت شبانه</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueNightIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks burgerLogout">
+                    <div class="burgerFirstLinksText">خروج</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueLogoutIcon.png" />
+                </div></a>
+            </div>
+            
+            <div class="burgerLast">
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">درباره ما</div>
+                </div></a>
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">ارتباط با ما</div>
+                </div></a>
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">پرسش ها</div>
+                </div></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="headerMargin"></div>
+
+    <div class="settingsBoxFirst">
+        <div class="imageBox">
+            <img class="profileImage" src="icons/accountIconBig.png" />
+        </div>
+        <div class="infoBox">
+            <div class="infoPartBox">
+                <div class="infoPartTitle">
+                    نام کاربری
+                </div>
+                <div class="infoPartValue">
+                    CaliphStudio
+                </div>
+                <div class="infoPartChangeButton">تغییر</div>
+            </div>
+            <div class="infoPartBox">
+                <div class="infoPartTitle">
+                    ایمیل
+                </div>
+                <div class="infoPartValue">
+                    Hamieieid@gmail.com
+                </div>
+                <div class="infoPartChangeButton">تغییر</div>
+            </div>
+            <div class="infoPartBox">
+                <div class="infoPartTitle">
+                    شماره تلفن
+                </div>
+                <div class="infoPartValue">
+                    09332954236
+                </div>
+                <div class="infoPartChangeButton">تغییر</div>
+            </div>
+        </div>
+        <div class="changeInfoBox">
+
+        </div>
+        <div class="passwordBox">
+            <div class="changePasswordButton">تغییر رمز</div>
+        </div>
+    </div>
+
+    <div class="settingsBoxSecond">
+        <div class="chooseOneBox">
+            حالت شبانه
+            <label class="chooseOneSwitch">
+                <input type="checkBox">
+                <span class="switchSlider"></span>
+            </label>
+        </div>
+        <div class="chooseOneBox">
+            دریافت پیام های تبلیغاتی
+            <label class="chooseOneSwitch">
+                <input type="checkBox" checked>
+                <span class="switchSlider"></span>
+            </label>
+        </div>
+        <div class="chooseOneBox">
+            ارسال اخبار به ایمل
+            <label class="chooseOneSwitch">
+                <input type="checkBox" checked>
+                <span class="switchSlider"></span>
+            </label>
+        </div>
+        <div class="chooseOneBox">
+            ارسال اخبار به تلفن همراه
+            <label class="chooseOneSwitch">
+                <input type="checkBox">
+                <span class="switchSlider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="settingsBoxThird">
+        <div class="thirdTop">
+            <div class="thirdTopLeft">
+                فروش آموزش جدید
+            </div>
+            <div class="thirdTopRight">
+                <div class="thirdTopRightBuyTutorials">
+                    آموزش های فروشی
+                </div>
+                <div class="thirdTopRightSellTutorials">
+                    آموزش های خریداری شده
+                </div>
+            </div>
+        </div>
+        <div class="thirdTutorialsBox">
+            <div class="tutorialBox">
+                <img class="tutorialImage" src="images/tutorials/angularImage.png" alt="تصویر آموزش" />
+                <div class="tutorialDescription">آموزش انگولار در 10 ساعت به همراه یک پروژه تکمیل شده تا پایان دوره</div>
+                <div class="tutorialLinks"><a class="tutorialLink"> برنامه نویسی</a> / <br /><a class="tutorialLink">(Angular) انگولار</a></div>
+                <div class="tutorialLine"></div>
+                <div class="tutorialOpen">مشاهده</div>
+                <div class="tutorialContinue">ادامه</div>
+            </div>
+            <div class="tutorialBox">
+                <img class="tutorialImage" src="images/tutorials/cSharpImage.png" alt="تصویر آموزش" />
+                <div class="tutorialDescription">آموزش سی شارپ و پایه های برنامه نویسی</div>
+                <div class="tutorialLinks"><a class="tutorialLink"> برنامه نویسی</a> / <br /><a class="tutorialLink">(C#) سی شارپ</a></div>
+                <div class="tutorialLine"></div>
+                <div class="tutorialOpen">مشاهده</div>
+                <div class="tutorialContinue">ادامه</div>
+            </div>
+            <div class="tutorialBox">
+                <img class="tutorialImage" src="images/tutorials/cImage2.jpg" alt="تصویر آموزش" />
+                <div class="tutorialDescription">آموزش انگولار در 10 ساعت به همراه یک پروژه تکمیل شده تا پایان دوره</div>
+                <div class="tutorialLinks"><a class="tutorialLink"> برنامه نویسی</a> / <br /><a class="tutorialLink">(Angular) انگولار</a></div>
+                <div class="tutorialLine"></div>
+                <div class="tutorialOpen">مشاهده</div>
+                <div class="tutorialContinue">ادامه</div>
+            </div>
+            <div class="tutorialBox">
+                <img class="tutorialImage" src="images/tutorials/firstImage.png" alt="تصویر آموزش" />
+                <div class="tutorialDescription">  
+                    آموزش انگولار در 10 ساعت به همراه یک پروژه تکمیل شده تا پایان دوره
+                </div>
+                <div class="tutorialLinks"><a class="tutorialLink"> برنامه نویسی</a> / <br /><a class="tutorialLink">(Angular) انگولار</a></div>
+                <div class="tutorialLine"></div>
+                <div class="tutorialOpen">مشاهده</div>
+                <div class="tutorialContinue">ادامه</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

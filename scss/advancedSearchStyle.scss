@@ -1,0 +1,312 @@
+@import "myScss/myScss";
+
+div.topText {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 36px;
+    color: black;
+}
+
+input.advancedSearchBar {
+    border-radius: 100px;
+    width: 600px;
+    margin-left: calc(50% - 300px);
+    margin-right: calc(50% - 300px);
+    margin-bottom: 50px;
+    background-color: rgba(0, 132, 255, 0.05);
+    box-sizing: border-box;
+    border: solid 2px rgba(0, 132, 255, 0.2);
+    padding-right: 10px;
+    padding-left: 10px;
+    color: black;
+    font-size: 20px;
+    height: 40px;
+    text-align: right;
+}
+
+div.splitBox {
+    height: 300px;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 35px;
+    float: right;
+    position: relative;
+}
+
+div.splitBoxLast {
+    height: 300px;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 35px;
+    float: right;
+    position: relative;
+}
+
+div.optionText {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 22px;
+    color: black;
+    text-align: right;
+}
+
+div.barContainer {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    overflow: auto;
+}
+
+select.subLinkSelection {
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 2px rgba(0, 132, 255, .2);
+    height: 40px;
+    padding: 10px;
+    appearance: none;
+}
+
+img.selectPointer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    width: 15px;
+    z-index: 1;
+}
+
+input.priceRange {
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 2px rgba(0, 132, 255, .2);
+    height: 40px;
+    padding: 10px 10px 10px 70px;
+    appearance: none;
+    margin: 0;
+    float: right;
+    text-align: right;
+}
+
+div.priceUnitText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 60px;
+    padding: 9px;
+    color: black;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: rgba(0, 132, 255, .2);
+    border-width: 0 2px 0 0;
+    text-align: center;
+}
+
+input.timeRange {
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 2px rgba(0, 132, 255, .2);
+    height: 40px;
+    padding: 10px 10px 10px 70px;
+    appearance: none;
+    margin: 0;
+    float: right;
+    text-align: right;
+}
+
+div.timeUnitText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 60px;
+    padding: 9px;
+    color: black;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: rgba(0, 132, 255, .2);
+    border-width: 0 2px 0 0;
+    text-align: center;
+}
+
+input.salesRange {
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 2px rgba(0, 132, 255, .2);
+    height: 40px;
+    padding: 10px;
+    text-align: right;
+}
+
+input.dayRange {
+    width: 30%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: rgba(0, 132, 255, .2);
+    border-width: 2px 2px 2px 1px;
+    height: 40px;
+    padding: 10px;
+    text-align: right;
+    float: right;
+}
+
+input.monthRange {
+    width: 30%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: rgba(0, 132, 255, .2);
+    border-width: 2px 1px 2px 1px;
+    height: 40px;
+    padding: 10px;
+    text-align: right;
+    float: right;
+}
+
+input.yearRange {
+    width: 40%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: rgba(0, 132, 255, .2);
+    border-width: 2px 1px 2px 2px;
+    height: 40px;
+    padding: 10px;
+    text-align: right;
+    float: right;
+}
+
+div.optionTextChooseOne {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+label.chooseOneSwitch {
+    width: 100px;
+    height: 34px;
+    position: absolute;
+    top: 80px;
+    right: 50%;
+    transform: translateX(50%);
+    display: inline-block;
+}
+
+label.chooseOneSwitch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+span.switchSlider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+span.switchSlider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + span.switchSlider {
+    background-color: rgb(0, 132, 255);
+}
+
+input:checked + span.switchSlider:before {
+    -webkit-transform: translateX(66px);
+    -ms-transform: translateX(66px);
+    transform: translateX(66px);
+}
+
+input.advancedSearchButton {
+    border: none;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    width: 33.33%;
+    margin-top: 50px;
+    margin-left: 33.33%;
+    margin-right: 33.33%;
+    margin-bottom: 100px;
+    height: 50px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+input.advancedSearchButton:hover {
+    background-color: rgb(0, 102, 225);
+}
+
+@media only screen and (max-width: 900px) {
+    input.advancedSearchBar {
+        width: 500px;
+        margin-left: calc(50% - 250px);
+        margin-right: calc(50% - 250px);
+    }
+
+    div.splitBox {
+        width: 50%;
+    }
+    
+    div.splitBoxLast {
+        width: 50%;
+    }
+
+    input.advancedSearchButton {
+        width : 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    input.advancedSearchBar {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    div.splitBox {
+        width: 100%;
+    }
+
+    div.splitBoxLast {
+        width: 100%;
+    }
+
+    input.advancedSearchButton {
+        width : 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    div.splitBoxLast {
+        height: 200px;
+    }
+}

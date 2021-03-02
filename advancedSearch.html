@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        جستجوی پیشرفته تماس
+    </title>
+    <link rel="icon" href="icons/logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/generalStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/advancedSearchStyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+    <header style="z-index: 2;">
+        <a href="main.html"><img class="headerLogo" src="icons/logo.png" alt="لوگو تماس" /></a>
+
+        <a><div class="headerLinks headerLinksFirst">درباره ما</div></a>
+        <a><div class="headerLinks">ارتباط با ما</div></a>
+        <a><div class="headerLinks" id="forum"><img style="width: 5px; margin-bottom: 4px; margin-right: 2px;" src="icons/triangle.png" />پرسش ها
+            <div class="forumDropdown">
+                <a class="forumDropdownLink">رایج ترین پرسش ها</a>
+                <a class="forumDropdownLink">پرسش های مربوط به سایت</a>
+                <a class="forumDropdownLink">پرسش های مربوط به آموزش ها</a>
+                <a class="forumDropdownLink">گزارش مشکل</a>
+            </div>
+        </div></a>
+
+        <a href="login.html"><div class="account">
+            <img class="accountPicture" src="icons/accountIcon.png" />
+            <p class="accountUsername">CaliphStudio<img style="width: 5px; margin-bottom: 2px; margin-left: 2px;" src="icons/triangle.png" /></p>
+            <div class="accountDropdown">
+                <a class="accountDropdownLink"><img src="icons/messageIcon.png" class="accountDropdownLinkIcon" />صندوق پیام</a>
+                <a class="accountDropdownLink" href="settings.html"><img src="icons/settingsIcon.png" class="accountDropdownLinkIcon" />تنظیمات</a>
+                <a class="accountDropdownLink"><img src="icons/nightIcon.png" class="accountDropdownLinkIcon" />حالت شبانه</a>
+                <a class="accountDropdownLink accountDropdownLinkLogout"><img src="icons/logoutIcon.png" class="accountDropdownLinkIcon" />خروج</a>
+            </div>
+        </div></a>
+
+        <img src="icons/burgerMenuIcon.png" class="burgerMenu"  onclick="burgerMenu(0)" />
+
+        <a href="#"><div class="shoppingCart">
+            <img class="shoppingCartPicture" src="icons/shoppingCartIcon.png"/>
+            <div class="shoppingCartNumber"><div class="centeredText">2</div></div>
+        </div></a>
+
+        <form class="search">
+            <div class="searchBarDiv">
+                <input class="searchBar"  type="text" dir="rtl" placeholder="آموزش مورد نظر را وارد کنید ..." />
+                <input class="searchIcon" type="image" src="icons/searchIcon.png" alt="جستجو" />
+                <img class="searchCloseIcon" src="icons/blueCloseIcon.png" alt="بستن" onclick="expandSearch(1)" />
+            </div>
+            <a class="advancedSearch" href="advancedSearch.html" title="جستجوی پیشرفته"><div class="centeredText"><b>+</b></div></a>
+        </form>
+        
+        <img class="mobileSearch" src="icons/searchIcon.png" onclick="expandSearch(0)" />
+
+        <div class="openedBurgerMenu">
+            <img class="closeBurger" src="icons/blueCloseIcon.png" onclick="burgerMenu(1)" />
+            <div class="burgerAccount">
+                <div class="burgerAccountName">CaliphStudio</div>
+                <img class="burgerAccountPicture" src="icons/accountIcon.png" />
+            </div>
+            <div class="burgerFirst">
+                <a><div class="burgerFirstLinks burgerShoppingCart">
+                    <div class="burgerFirstLinksText">سبد خرید</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueShoppingCartIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">صندوق پیام</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueMessageIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">تنظیمات</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueSettingsIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">حالت شبانه</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueNightIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks burgerLogout">
+                    <div class="burgerFirstLinksText">خروج</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueLogoutIcon.png" />
+                </div></a>
+            </div>
+            
+            <div class="burgerLast">
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">درباره ما</div>
+                </div></a>
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">ارتباط با ما</div>
+                </div></a>
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">پرسش ها</div>
+                </div></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="topText">
+        نام آموزش
+    </div>
+    <form>
+        <input class="advancedSearchBar" type="text" autofocus />
+        <div class="splitBox">
+            <div class="optionText">
+                دسته بندی
+            </div>
+            <div class="barContainer">
+                <img class="selectPointer" src="icons/pointerIcon.png" />
+                <select class="subLinkSelection" dir="rtl">
+                    <option value="1">همه</option>
+                    <option value="2">برنامه نویسی</option>
+                    <option value="3">دروس دانشگاهی</option>
+                    <option value="4">دروس مدرسه ای</option>
+                    <option value="5">متفرقه</option>
+                </select>
+            </div>
+            <div class="optionText" style="margin-top: 25px;">
+                زیر شاخه
+            </div>
+            <div class="barContainer">
+                <img class="selectPointer" src="icons/pointerIcon.png" />
+                <select class="subLinkSelection" dir="rtl">
+                    <option value="1">همه</option>
+                    <option value="2">برنامه نویسی</option>
+                    <option value="3">دروس دانشگاهی</option>
+                    <option value="4">دروس مدرسه ای</option>
+                    <option value="5">متفرقه</option>
+                </select>
+            </div>
+            
+        </div>
+        <div class="splitBox">
+            <div class="optionText">
+                از قیمت
+            </div>
+            <div class="barContainer">
+                <input class="priceRange" type="text" />
+                <div class="priceUnitText">تومان</div>
+            </div>
+            <div class="optionText" style="margin-top: 25px;">
+                تا قیمت
+            </div>
+            <div class="barContainer">
+                <input class="priceRange" type="text" />
+                <div class="priceUnitText">تومان</div>
+            </div>
+        </div>
+        <div class="splitBox">
+            <div class="optionText">
+                از مدت زمان
+            </div>
+            <div class="barContainer">
+                <input class="timeRange" type="text" />
+                <div class="timeUnitText">ساعت</div>
+            </div>
+            <div class="optionText" style="margin-top: 25px;">
+                تا مدت زمان
+            </div>
+            <div class="barContainer">
+                <input class="timeRange" type="text" />
+                <div class="timeUnitText">ساعت</div>
+            </div>
+        </div>
+        <div class="splitBox">
+            <div class="optionText">
+                از تعداد خرید
+            </div>
+            <div class="barContainer">
+                <input class="salesRange" type="text" />
+            </div>
+            <div class="optionText" style="margin-top: 25px;">
+                تا تعداد خرید
+            </div>
+            <div class="barContainer">
+                <input class="salesRange" type="text" />
+            </div>
+        </div>
+        <div class="splitBox">
+            <div class="optionText">
+                از تاریخ
+            </div>
+            <div class="barContainer">
+                <input class="dayRange" type="text" />
+                <input class="monthRange" type="text" />
+                <input class="yearRange" type="text" />
+            </div>
+            <div class="optionText" style="margin-top: 25px;">
+                تا تاریخ
+            </div>
+            <div class="barContainer">
+                <input class="dayRange" type="text" />
+                <input class="monthRange" type="text" />
+                <input class="yearRange" type="text" />
+            </div>
+        </div>
+        <div class="splitBoxLast">
+            <div class="optionTextChooseOne">
+                تنها آموزش های معتبر
+            </div>
+            <label class="chooseOneSwitch">
+                <input type="checkBox">
+                <span class="switchSlider"></span>
+            </label>
+        </div>
+        <input class="advancedSearchButton" type="submit" value="جستجو کن" />
+    </form>
+</body>
+</html>

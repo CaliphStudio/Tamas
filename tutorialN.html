@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>آموزش تماس</title>
+        <link rel="icon" href="icons/logo.png" />
+        <link rel="stylesheet" type="text/css" href="css/generalStyle.css" />
+        <link rel="stylesheet" type="text/css" href="css/tutorialNStyle.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta charset="UTF-8" />   
+</head>
+
+<body>
+    <header style="z-index: 2;">
+        <a href="main.html"><img class="headerLogo" src="icons/logo.png" alt="لوگو تماس" /></a>
+
+        <a><div class="headerLinks headerLinksFirst">درباره ما</div></a>
+        <a><div class="headerLinks">ارتباط با ما</div></a>
+        <a><div class="headerLinks" id="forum"><img style="width: 5px; margin-bottom: 4px; margin-right: 2px;" src="icons/triangle.png" />پرسش ها
+            <div class="forumDropdown">
+                <a class="forumDropdownLink">رایج ترین پرسش ها</a>
+                <a class="forumDropdownLink">پرسش های مربوط به سایت</a>
+                <a class="forumDropdownLink">پرسش های مربوط به آموزش ها</a>
+                <a class="forumDropdownLink">گزارش مشکل</a>
+            </div>
+        </div></a>
+
+        <a href="login.html"><div class="account">
+            <img class="accountPicture" src="icons/accountIcon.png" />
+            <p class="accountUsername">CaliphStudio<img style="width: 5px; margin-bottom: 2px; margin-left: 2px;" src="icons/triangle.png" /></p>
+            <div class="accountDropdown">
+                <a class="accountDropdownLink"><img src="icons/messageIcon.png" class="accountDropdownLinkIcon" />صندوق پیام</a>
+                <a class="accountDropdownLink" href="settings.html"><img src="icons/settingsIcon.png" class="accountDropdownLinkIcon" />تنظیمات</a>
+                <a class="accountDropdownLink"><img src="icons/nightIcon.png" class="accountDropdownLinkIcon" />حالت شبانه</a>
+                <a class="accountDropdownLink accountDropdownLinkLogout"><img src="icons/logoutIcon.png" class="accountDropdownLinkIcon" />خروج</a>
+            </div>
+        </div></a>
+
+        <img src="icons/burgerMenuIcon.png" class="burgerMenu"  onclick="burgerMenu(0)" />
+
+        <a href="#"><div class="shoppingCart">
+            <img class="shoppingCartPicture" src="icons/shoppingCartIcon.png"/>
+            <div class="shoppingCartNumber"><div class="centeredText">2</div></div>
+        </div></a>
+
+        <form class="search">
+            <div class="searchBarDiv">
+                <input class="searchBar"  type="text" dir="rtl" placeholder="آموزش مورد نظر را وارد کنید ..." />
+                <input class="searchIcon" type="image" src="icons/searchIcon.png" alt="جستجو" />
+                <img class="searchCloseIcon" src="icons/blueCloseIcon.png" alt="بستن" onclick="expandSearch(1)" />
+            </div>
+            <a class="advancedSearch" href="advancedSearch.html" title="جستجوی پیشرفته"><div class="centeredText"><b>+</b></div></a>
+        </form>
+        
+        <img class="mobileSearch" src="icons/searchIcon.png" onclick="expandSearch(0)" />
+
+        <div class="openedBurgerMenu">
+            <img class="closeBurger" src="icons/blueCloseIcon.png" onclick="burgerMenu(1)" />
+            <div class="burgerAccount">
+                <div class="burgerAccountName">CaliphStudio</div>
+                <img class="burgerAccountPicture" src="icons/accountIcon.png" />
+            </div>
+            <div class="burgerFirst">
+                <a><div class="burgerFirstLinks burgerShoppingCart">
+                    <div class="burgerFirstLinksText">سبد خرید</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueShoppingCartIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">صندوق پیام</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueMessageIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">تنظیمات</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueSettingsIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">حالت شبانه</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueNightIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks burgerLogout">
+                    <div class="burgerFirstLinksText">خروج</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueLogoutIcon.png" />
+                </div></a>
+            </div>
+            
+            <div class="burgerLast">
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">درباره ما</div>
+                </div></a>
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">ارتباط با ما</div>
+                </div></a>
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">پرسش ها</div>
+                </div></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="topBox">
+        <div class="topBoxInfo">
+            <img class="topBoxTutorialImage" src="images/tutorials/javascriptImage.jpg" />
+            <div class="tutorialImageDescription">
+                منتشر شده در 1398/06/03
+            </div>
+            <div class="topStats" dir="rtl" lang="ar">
+                <img class="statsIcon" src="icons/clockIcon.png" />
+                15 ساعت
+            </div>
+            <div class="topStats" dir="rtl" lang="ar">
+                <img class="statsIcon" src="icons/humanIcon.png" />
+                16941 فروش
+            </div>
+            <div class="topStats" dir="rtl" lang="ar">
+                <img class="statsIcon" src="icons/moneyIcon.png" />
+                15,000 تومان
+            </div>
+        </div>
+        <div class="topBoxMainContent">
+            <div class="topBoxMainContentSubject">
+                (JavaScript) آموزش تکمیلی جاوا اسکریپت  
+            </div>
+            <div class="topBoxMainContentDescription" dir="rtl">         
+                امروزه به دلیل آنکه ارتباطات فضای مجازی رونق
+                 زیادی یافته است طراحی یک سایت به شکل مناسب و مورد پسند کاربران
+                 متفاوت اهمیت بالایی یافته است. به همین جهت صاحبان سرمایه و کار برای رونق کار خود به
+                 دنبال طراحان حرفه ای برای طراحی سایتی مناسب و کارآمد هستند. لذا یادگیری روش های مناسب 
+                و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است.
+                 جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله آن عناصر HTML 
+                 موجود در صفحه وب و مقادیر CSS آن ها را تغییر داد و نیز ابزاری برای
+                  اعتبارسنجی داده ها است
+            </div>
+        </div>
+        <div class="teacherBox">
+            <div class="teacherHeader">
+                <b>
+                مدرس
+                </b>
+            </div>
+            <img class="teacherImage" src="images/teacherImage.jpg" />
+            <div class="teacherName">
+                محمد شیروانی
+            </div>
+            <div class="seeMoreDescription" dir="rtl">
+                توضیحات بیشتر ...
+            </div>
+            <div class="teacherDescription" dir="rtl">
+                توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس 
+                توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس 
+                توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس 
+                توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس توضیحات مدرس 
+            </div>
+            <div class="teacherContactButton">
+                ارسال پیام
+            </div>
+        </div>
+        <div class="topBoxSales">
+            <div class="owningInfo">
+                خریداری نشده
+            </div>
+            <div class="buyButton">
+                افزودن به سبد خرید
+            </div>
+        </div>
+    </div>
+    <div class="videoBox">
+        <div class="videoHeader" dir="rtl">
+            پیش نمایش جلسه اول :
+        </div>
+        <video class="tutorialVideo" controls>
+            <source src="videos/tutorialVideo.mp4" type="video/mp4" />
+            Your browser doesnt support the video tag.
+        </video>
+        <div class="videoDescription" dir="rtl">
+            مطالب اضافه : توضیحات متنی مربوط به جلسه اول در این بخش قرار میگیرند ...
+        </div>
+        <div class="videoButtonsBox">
+            <div class="videoPrevButton">
+                <img class="videoButtonPointer" src="icons/pointerLeftIcon.png" />
+                جلسه قبل
+            </div>
+            <div class="videoNextButton">
+                جلسه بعد
+                <img class="videoButtonPointer" src="icons/pointerRightIcon.png" />
+            </div>
+            <div class="videoDownloadButton">
+                <img class="videoDownloadIcon" src="icons/downloadBlueIcon.png" />
+                دانلود
+            </div>
+        </div>
+    </div>
+    <div class="classList">
+        <div class="classListHeader">
+            : لیست جلسات
+        </div>
+        <div class="classListItemActive" dir="rtl">
+            1. جلسه اول
+        </div>
+        <div class="classListItem" dir="rtl">
+            2. جلسه دوم
+        </div>
+        <div class="classListItem" dir="rtl">
+            3. جلسه سوم
+        </div>
+        <div class="classListItem" dir="rtl">
+            4. جلسه چهارم
+        </div>
+        <div class="classListItem" dir="rtl">
+            5. جلسه پنجم
+        </div>
+        <div class="classListItem" dir="rtl">
+            6. جلسه ششم
+        </div>
+    </div>
+</body>
+</html>

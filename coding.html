@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>برنامه نویسی - تماس</title>
+    <link rel="icon" href="icons/logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/generalStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/codingStyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+    <header style="z-index: 2;">
+        <a href="main.html"><img class="headerLogo" src="icons/logo.png" alt="لوگو تماس" /></a>
+
+        <a><div class="headerLinks headerLinksFirst">درباره ما</div></a>
+        <a><div class="headerLinks">ارتباط با ما</div></a>
+        <a><div class="headerLinks" id="forum"><img style="width: 5px; margin-bottom: 4px; margin-right: 2px;" src="icons/triangle.png" />پرسش ها
+            <div class="forumDropdown">
+                <a class="forumDropdownLink">رایج ترین پرسش ها</a>
+                <a class="forumDropdownLink">پرسش های مربوط به سایت</a>
+                <a class="forumDropdownLink">پرسش های مربوط به آموزش ها</a>
+                <a class="forumDropdownLink">گزارش مشکل</a>
+            </div>
+        </div></a>
+
+        <a href="settings.html"><div class="account">
+            <img class="accountPicture" src="icons/accountIcon.png" />
+            <p class="accountUsername">CaliphStudio<img style="width: 5px; margin-bottom: 2px; margin-left: 2px;" src="icons/triangle.png" /></p>
+            <div class="accountDropdown">
+                <a class="accountDropdownLink"><img src="icons/messageIcon.png" class="accountDropdownLinkIcon" />صندوق پیام</a>
+                <a class="accountDropdownLink"><img src="icons/settingsIcon.png" class="accountDropdownLinkIcon" />تنظیمات</a>
+                <a class="accountDropdownLink"><img src="icons/nightIcon.png" class="accountDropdownLinkIcon" />حالت شبانه</a>
+                <a class="accountDropdownLink accountDropdownLinkLogout"><img src="icons/logoutIcon.png" class="accountDropdownLinkIcon" />خروج</a>
+            </div>
+        </div></a>
+
+        <img src="icons/burgerMenuIcon.png" class="burgerMenu"  onclick="burgerMenu(0)" />
+
+        <a href="#"><div class="shoppingCart">
+            <img class="shoppingCartPicture" src="icons/shoppingCartIcon.png"/>
+            <div class="shoppingCartNumber"><div class="centeredText">2</div></div>
+        </div></a>
+
+        <form class="search">
+            <div class="searchBarDiv">
+                <input class="searchBar"  type="text" dir="rtl" placeholder="آموزش مورد نظر را وارد کنید ..." />
+                <input class="searchIcon" type="image" src="icons/searchIcon.png" alt="جستجو" />
+                <img class="searchCloseIcon" src="icons/blueCloseIcon.png" alt="بستن" onclick="expandSearch(1)" />
+            </div>
+            <a class="advancedSearch" href="advancedSearch.html" title="جستجوی پیشرفته"><div class="centeredText"><b>+</b></div></a>
+        </form>
+        
+        <img class="mobileSearch" src="icons/searchIcon.png" onclick="expandSearch(0)" />
+
+        <div class="openedBurgerMenu">
+            <img class="closeBurger" src="icons/blueCloseIcon.png" onclick="burgerMenu(1)" />
+            <div class="burgerAccount">
+                <div class="burgerAccountName">CaliphStudio</div>
+                <img class="burgerAccountPicture" src="icons/accountIcon.png" />
+            </div>
+            <div class="burgerFirst">
+                <a><div class="burgerFirstLinks burgerShoppingCart">
+                    <div class="burgerFirstLinksText">سبد خرید</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueShoppingCartIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">صندوق پیام</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueMessageIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">تنظیمات</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueSettingsIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks">
+                    <div class="burgerFirstLinksText">حالت شبانه</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueNightIcon.png" />
+                </div></a>
+                <a><div class="burgerFirstLinks burgerLogout">
+                    <div class="burgerFirstLinksText">خروج</div>
+                    <img class="burgerFirstLinksIcon" src="icons/blueLogoutIcon.png" />
+                </div></a>
+            </div>
+            
+            <div class="burgerLast">
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">درباره ما</div>
+                </div></a>
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">ارتباط با ما</div>
+                </div></a>
+                <a><div class="burgerLastLinks">
+                    <div class="burgerLastLinksText">پرسش ها</div>
+                </div></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="top">
+        <div class="topText">برنامه<br /> نویسی &nbsp  &nbsp &nbsp </div>
+        <div class="subLinkBox">
+            <div class="subLinkActive"><div class="centeredText">برنامه نویسی</div></div>
+            <div class="subLink">
+                <a class="subLinkLinks" href="#"></a>
+                <div class="centeredText subLinkText">نرم افزار های کاریردی</div>
+                <div class="subLinkDropDown" style="left: -1px">
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع اول</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع دوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هشتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه نهم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع سوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subLink">
+                <a class="subLinkLinks" href="#"></a>
+                <div class="centeredText subLinkText">دروس دانشگاهی</div>
+                <div class="subLinkDropDown" style="left: -112px">
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader" style="width: calc(200% + 100px)">موضوع اول</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هشتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه نهم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader" style="visibility: hidden;">موضوع دوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه دهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه یازدهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوازدهم</li>
+
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع دوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع سوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subLink">
+                <a class="subLinkLinks" href="#"></a>
+                <div class="centeredText subLinkText">دروس مدرسه ای</div>
+                <div class="subLinkDropDown" style="left: -223px">
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع اول</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع دوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هشتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه نهم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع سوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هشتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه نهم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع چهارم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هشتم</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subLink">
+                <a class="subLinkLinks" href="#"></a>
+                <div class="centeredText subLinkText">فنی و فیزیکی</div>
+                <div class="subLinkDropDown" style="left: -334px">
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع اول</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع دوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader" style="width: calc(200% + 100px)">موضوع سوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هشتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه نهم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader" style="visibility: hidden;">موضوع چهارم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه دهم</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subLink">
+                <a class="subLinkLinks" href="#"></a>
+                <div class="centeredText subLinkText">رزمی و ورزشی</div>
+                <div class="subLinkDropDown" style="left: -445px">
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع اول</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع دوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع سوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع چهارم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subLink">
+                <a class="subLinkLinks" href="#"></a>
+                <div class="centeredText subLinkText">علوم انسانی</div>
+                <div class="subLinkDropDown" style="left: -556px">
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader" style="width: calc(200% + 100px)">موضوع اول</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هشتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه نهم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader" style="visibility: hidden;">موضوع دوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه دهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه یازدهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوازدهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سیزدهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهاردهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پانزدهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه شانزدهم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader" style="width: calc(200% + 100px)">موضوع دوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هشتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه نهم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader" style="visibility: hidden;">موضوع چهارم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه دهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه یازدهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوازهم</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subLink">
+                <a class="subLinkLinks" href="#"></a>
+                <div class="centeredText subLinkText">متفرقه</div>
+                <div class="subLinkDropDown" style="left: -667px">
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع اول</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع دوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع سوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه نهم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دهم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع چهارم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subLink subLinkRight">
+                <a class="subLinkLinks" href="#"></a>
+                <div class="centeredText subLinkText">زیر شاخه ها</div>
+                <div class="subLinkDropDown" style="left: -778px">
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع اول</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع دوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع سوم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه پنجم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه ششم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هفتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه هشتم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه نهم</li>
+                    </ul>
+                    <ul class="subLinkDropDownList">
+                        <div class="subLinkDropDownHeader">موضوع چهارم</div>
+                        <li class="subLinkDropDownListItem">زیر شاخه اول</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه دوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه سوم</li>
+                        <li class="subLinkDropDownListItem">زیر شاخه چهارم</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="description">
+        بدون شک، برنامه نویسی یکی از مهم‌ترین مهارت‌هایی است که امروزه نه تنها
+         برای فارغ التحصیلان و دانشجویان رشته مهندسی کامپیوتر، بلکه برای سایر رشته‌ها و زمینه‌ها نیز به شکل ضروری، مورد نیاز است
+    </div>
+
+    <div class="buddy">
+        <div class="pagesBox">
+            <img class="pageIconImage" src="icons/pointerBlueRightIcon.png" />
+            <div class="pageIconNumber pageIconNumberActive"><b class="centeredText">1</b></div>
+            <div class="pageIconNumber"><b class="centeredText">2</b></div>
+            <div class="pageIconNumber"><b class="centeredText">3</b></div>
+            <div class="pageDots">...</div>
+            <div class="pageIconNumber"><b class="centeredText">13</b></div>
+            <img class="pageIconImage" src="icons/pointerBlueLeftIcon.png" />
+        </div>
+
+        <div class="sortingbox">
+            <div class="sortingIcon sortingIconActive">
+                <b class="centeredText">فروش</b>
+                <img class="sortIconTriangle" src="icons/triangleWhite.png" />
+            </div>
+            <div class="sortingIcon"><b class="centeredText">قیمت</b></div>
+            <div class="sortingIcon"><b class="centeredText">زمان</b></div>
+        </div>
+
+        <div class="tutorialBox">
+            <img class="tutorialImage" src="images/tutorials/cSharpImage.png" />
+            <div class="tutorialName">
+                <b>
+                C# آموزش تکمیلی
+                </b>
+            </div>
+            <div class="tutorialDescription">
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+            </div>
+            <div class="tutorialStatBox">
+                <div class="tutorialStat" title="زمان">
+                    15:37
+                    <img class="tutorialStatIcon" src="icons/clockIcon.png" />
+                </div>
+                <div class="tutorialStat" title="تعداد فروش">
+                    16942
+                    <img class="tutorialStatIcon" src="icons/humanIcon.png" />
+                </div>
+                <div class="tutorialStat" title="قیمت به تومان">
+                    17,500
+                    <img class="tutorialStatIcon" src="icons/moneyIcon.png" />
+                </div>
+            </div>
+            <div class="tutorialBuy">خرید</div>
+            <div class="tutorialOpen">مشاهده</div>
+        </div>
+        <div class="tutorialBox">
+            <img class="tutorialImage" src="images/tutorials/cSharpImage.png" />
+            <div class="tutorialName">
+                <b>
+                C# آموزش تکمیلی
+                </b>
+            </div>
+            <div class="tutorialDescription">
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+            </div>
+            <div class="tutorialStatBox">
+                <div class="tutorialStat" title="زمان">
+                    15:37
+                    <img class="tutorialStatIcon" src="icons/clockIcon.png" />
+                </div>
+                <div class="tutorialStat" title="تعداد فروش">
+                    16942
+                    <img class="tutorialStatIcon" src="icons/humanIcon.png" />
+                </div>
+                <div class="tutorialStat" title="قیمت به تومان">
+                    17,500
+                    <img class="tutorialStatIcon" src="icons/moneyIcon.png" />
+                </div>
+            </div>
+            <div class="tutorialBuy">خرید</div>
+            <div class="tutorialOpen">مشاهده</div>
+        </div>
+        <div class="tutorialBox">
+            <img class="tutorialImage" src="images/tutorials/cSharpImage.png" />
+            <div class="tutorialName">
+                <b>
+                C# آموزش تکمیلی
+                </b>
+            </div>
+            <div class="tutorialDescription">
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+            </div>
+            <div class="tutorialStatBox">
+                <div class="tutorialStat" title="زمان">
+                    15:37
+                    <img class="tutorialStatIcon" src="icons/clockIcon.png" />
+                </div>
+                <div class="tutorialStat" title="تعداد فروش">
+                    16942
+                    <img class="tutorialStatIcon" src="icons/humanIcon.png" />
+                </div>
+                <div class="tutorialStat" title="قیمت به تومان">
+                    17,500
+                    <img class="tutorialStatIcon" src="icons/moneyIcon.png" />
+                </div>
+            </div>
+            <div class="tutorialBuy">خرید</div>
+            <div class="tutorialOpen">مشاهده</div>
+        </div>
+        <div class="tutorialBox">
+            <img class="tutorialImage" src="images/tutorials/cSharpImage.png" />
+            <div class="tutorialName">
+                <b>
+                C# آموزش تکمیلی
+                </b>
+            </div>
+            <div class="tutorialDescription">
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+            </div>
+            <div class="tutorialStatBox">
+                <div class="tutorialStat" title="زمان">
+                    15:37
+                    <img class="tutorialStatIcon" src="icons/clockIcon.png" />
+                </div>
+                <div class="tutorialStat" title="تعداد فروش">
+                    16942
+                    <img class="tutorialStatIcon" src="icons/humanIcon.png" />
+                </div>
+                <div class="tutorialStat" title="قیمت به تومان">
+                    17,500
+                    <img class="tutorialStatIcon" src="icons/moneyIcon.png" />
+                </div>
+            </div>
+            <div class="tutorialBuy">خرید</div>
+            <div class="tutorialOpen">مشاهده</div>
+        </div>
+        <div class="tutorialBox">
+            <img class="tutorialImage" src="images/tutorials/cSharpImage.png" />
+            <div class="tutorialName">
+                <b>
+                C# آموزش تکمیلی
+                </b>
+            </div>
+            <div class="tutorialDescription">
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+            </div>
+            <div class="tutorialStatBox">
+                <div class="tutorialStat" title="زمان">
+                    15:37
+                    <img class="tutorialStatIcon" src="icons/clockIcon.png" />
+                </div>
+                <div class="tutorialStat" title="تعداد فروش">
+                    16942
+                    <img class="tutorialStatIcon" src="icons/humanIcon.png" />
+                </div>
+                <div class="tutorialStat" title="قیمت به تومان">
+                    17,500
+                    <img class="tutorialStatIcon" src="icons/moneyIcon.png" />
+                </div>
+            </div>
+            <div class="tutorialBuy">خرید</div>
+            <div class="tutorialOpen">مشاهده</div>
+        </div>
+        <div class="tutorialBox">
+            <img class="tutorialImage" src="images/tutorials/cSharpImage.png" />
+            <div class="tutorialName">
+                <b>
+                C# آموزش تکمیلی
+                </b>
+            </div>
+            <div class="tutorialDescription">
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+            </div>
+            <div class="tutorialStatBox">
+                <div class="tutorialStat" title="زمان">
+                    15:37
+                    <img class="tutorialStatIcon" src="icons/clockIcon.png" />
+                </div>
+                <div class="tutorialStat" title="تعداد فروش">
+                    16942
+                    <img class="tutorialStatIcon" src="icons/humanIcon.png" />
+                </div>
+                <div class="tutorialStat" title="قیمت به تومان">
+                    17,500
+                    <img class="tutorialStatIcon" src="icons/moneyIcon.png" />
+                </div>
+            </div>
+            <div class="tutorialBuy">خرید</div>
+            <div class="tutorialOpen">مشاهده</div>
+        </div>
+        <div class="tutorialBox">
+            <img class="tutorialImage" src="images/tutorials/cSharpImage.png" />
+            <div class="tutorialName">
+                <b>
+                C# آموزش تکمیلی
+                </b>
+            </div>
+            <div class="tutorialDescription">
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+            </div>
+            <div class="tutorialStatBox">
+                <div class="tutorialStat" title="زمان">
+                    15:37
+                    <img class="tutorialStatIcon" src="icons/clockIcon.png" />
+                </div>
+                <div class="tutorialStat" title="تعداد فروش">
+                    16942
+                    <img class="tutorialStatIcon" src="icons/humanIcon.png" />
+                </div>
+                <div class="tutorialStat" title="قیمت به تومان">
+                    17,500
+                    <img class="tutorialStatIcon" src="icons/moneyIcon.png" />
+                </div>
+            </div>
+            <div class="tutorialBuy">خرید</div>
+            <div class="tutorialOpen">مشاهده</div>
+        </div>
+        <div class="tutorialBox">
+            <img class="tutorialImage" src="images/tutorials/cSharpImage.png" />
+            <div class="tutorialName">
+                <b>
+                C# آموزش تکمیلی
+                </b>
+            </div>
+            <div class="tutorialDescription">
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+            </div>
+            <div class="tutorialStatBox">
+                <div class="tutorialStat" title="زمان">
+                    15:37
+                    <img class="tutorialStatIcon" src="icons/clockIcon.png" />
+                </div>
+                <div class="tutorialStat" title="تعداد فروش">
+                    16942
+                    <img class="tutorialStatIcon" src="icons/humanIcon.png" />
+                </div>
+                <div class="tutorialStat" title="قیمت به تومان">
+                    17,500
+                    <img class="tutorialStatIcon" src="icons/moneyIcon.png" />
+                </div>
+            </div>
+            <div class="tutorialBuy">خرید</div>
+            <div class="tutorialOpen">مشاهده</div>
+        </div>
+        <div class="tutorialBox">
+            <img class="tutorialImage" src="images/tutorials/cSharpImage.png" />
+            <div class="tutorialName">
+                <b>
+                C# آموزش تکمیلی
+                </b>
+            </div>
+            <div class="tutorialDescription">
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+            </div>
+            <div class="tutorialStatBox">
+                <div class="tutorialStat" title="زمان">
+                    15:37
+                    <img class="tutorialStatIcon" src="icons/clockIcon.png" />
+                </div>
+                <div class="tutorialStat" title="تعداد فروش">
+                    16942
+                    <img class="tutorialStatIcon" src="icons/humanIcon.png" />
+                </div>
+                <div class="tutorialStat" title="قیمت به تومان">
+                    17,500
+                    <img class="tutorialStatIcon" src="icons/moneyIcon.png" />
+                </div>
+            </div>
+            <div class="tutorialBuy">خرید</div>
+            <div class="tutorialOpen">مشاهده</div>
+        </div>
+        <div class="tutorialBox">
+            <img class="tutorialImage" src="images/tutorials/cSharpImage.png" />
+            <div class="tutorialName">
+                <b>
+                C# آموزش تکمیلی
+                </b>
+            </div>
+            <div class="tutorialDescription">
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+                توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش توضیحات آموزش
+            </div>
+            <div class="tutorialStatBox">
+                <div class="tutorialStat" title="زمان">
+                    15:37
+                    <img class="tutorialStatIcon" src="icons/clockIcon.png" />
+                </div>
+                <div class="tutorialStat" title="تعداد فروش">
+                    16942
+                    <img class="tutorialStatIcon" src="icons/humanIcon.png" />
+                </div>
+                <div class="tutorialStat" title="قیمت به تومان">
+                    17,500
+                    <img class="tutorialStatIcon" src="icons/moneyIcon.png" />
+                </div>
+            </div>
+            <div class="tutorialBuy">خرید</div>
+            <div class="tutorialOpen">مشاهده</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerLeftBox">
+            <img class="footerLogo" src="icons/logo.png" />
+            <div class="footerSocialMediaBox">
+                <img class="footerSocialMediaIcon" src="icons/instagramIcon.png" />
+                <img class="footerSocialMediaIcon" src="icons/telegramIcon.png" />
+                <img class="footerSocialMediaIcon" src="icons/youtubeIcon.png" />
+                <img class="footerSocialMediaIcon" src="icons/tweeterIcon.png" />
+            </div>
+            <div class="footerMobileHeader">
+                <span> : </span> شماره تماس دفتر مرکزی 
+            </div>
+            <div class="footerMobileText">
+                021 6485 6996 <br /> 021 6485 6975
+            </div>
+            <div class="footerAddressHeader">
+                <span> : </span> آدرس دفتر مرکزی
+            </div>
+            <div class="footerAddressText">
+                آدرس دفتر  آدرس دفتر  آدرس دفتر  آدرس دفتر  آدرس دفتر  آدرس دفتر  آدرس دفتر  آدرس دفتر  آدرس دفتر  آدرس دفتر  آدرس دفتر آدرس دفتر آدرس دفتر 
+            </div>
+        </div>
+        <div class="footerRightBox">
+            <div class="footerLinksHeader">
+                دسته بندی آموزش ها
+            </div>
+            <div class="footerLinksHeaderMobile" onclick="footerLinks (0)">
+                دسته بندی آموزش ها
+                <img class="footerLinksHeaderPointer" src="icons/pointerIcon.png" />
+            </div>
+            <a class="footerLinks">
+                برنامه نویسی
+            </a>
+            <a class="footerLinks">
+                دروس دانشگاهی
+            </a>
+            <a class="footerLinks">
+                فنی و فیزیکی
+            </a>
+            <a class="footerLinks">
+                ورزشی
+            </a>
+            <a class="footerLinks">
+                دروس مدرسه ای
+            </a>
+            <a class="footerLinks">
+                علوم انسانی
+            </a>
+            <a class="footerLinks">
+                متفرقه
+            </a>
+            <div class="footerLinksDropDown" style="">
+                <a class="footerDropDownLinks">
+                    برنامه نویسی
+                </a>
+                <a class="footerDropDownLinks">
+                    دروس دانشگاهی
+                </a>
+                <a class="footerDropDownLinks">
+                    فنی و فیزیکی
+                </a>
+                <a class="footerDropDownLinks">
+                    ورزشی
+                </a>
+                <a class="footerDropDownLinks">
+                    دروس مدرسه ای
+                </a>
+                <a class="footerDropDownLinks">
+                    علوم انسانی
+                </a>
+                <a class="footerDropDownLinks">
+                    متفرقه
+                </a>
+            </div>
+        </div>
+        <div class="footerRightBox">
+            <div class="footerLinksHeader">
+                آموزش های شما
+            </div>
+            <div class="footerLinksHeaderMobile" onclick="footerLinks (1)">
+                آموزش های شما
+                <img class="footerLinksHeaderPointer" src="icons/pointerIcon.png" />
+            </div>
+            <a class="footerLinks">
+                آموزش های خریداری شده
+            </a>
+            <a class="footerLinks">
+                آموزش های فروشی شما
+            </a>
+            <a class="footerLinks">
+                فروش آموزش جدید
+            </a>
+            <div class="footerLinksDropDown" style="">
+                <a class="footerDropDownLinks">
+                    آموزش های خریداری شده
+                </a>
+                <a class="footerDropDownLinks">
+                    آموزش های فروشی شما
+                </a>
+                <a class="footerDropDownLinks">
+                    فروش آموزش جدید
+                </a>
+            </div>
+        </div>
+        <div class="footerRightBox">
+            <div class="footerLinksHeader" style="visibility: hidden;">
+                آآآآ
+            </div>
+            <div class="footerLinksHeaderMobile" style="visibility: hidden;">
+                آآآآ
+            </div>
+            <a class="footerLinksUntitled">
+                درباره ما
+            </a>
+            <a class="footerLinksUntitled">
+                پرسش ها
+            </a>
+            <a class="footerLinksUntitled">
+                همکاری با ما
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/generalJs.js"></script>
+    <script src="js/coding.js"></script>
+</body>
